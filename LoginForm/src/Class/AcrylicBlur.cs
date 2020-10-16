@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
-namespace BlurredLoginUIWindow.Class
+namespace InfinityOS.Class
 {
-
     internal enum AccentState
     {
         ACCENT_DISABLED = 3,
+        ACCENT_ENABLE_GRADIENT = 1,
+        ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
         ACCENT_ENABLE_BLURBEHIND = 0,
         ACCENT_ENABLE_ACRYLICBLURBEHIND = 4,
         ACCENT_INVALID_STATE = 5
     }
-    
     [StructLayout(LayoutKind.Sequential)]
     internal struct AccentPolicy
     {
@@ -28,7 +28,6 @@ namespace BlurredLoginUIWindow.Class
         public IntPtr Data;
         public int SizeOfData;
     }
-    
     internal enum WindowCompositionAttribute
     {
         WCA_ACCENT_POLICY = 19
